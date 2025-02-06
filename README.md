@@ -26,7 +26,7 @@ Todos os desafios deste repositório foram resolvidas utilizando Java.
 - Todas as soluções estão no mesmo estado da submissão em tempo de prova (Exceto na pasta `/OBI - Treinamento`).  
 - Caminhos de competições que participei possuem os documentos PDF disponibilizados aos competidores no dia das provas e a solução disponibilizada momentos após o encerramento do tempo de prova.
 
-No arquivo `/OBI - Treinamento`, estão disponíveis pastas e arquivos de treinamento, na qual resolvo desafios de anos anteriores, sem estar participando da competição no momento da resolução.  
+No diretório `/OBI - Treinamento`, estão disponíveis pastas e arquivos de treinamento, na qual resolvo desafios de anos anteriores, sem estar participando da competição no momento da resolução.  
 
 A proposta de cada questão, para cada modalidade, ano e nível, pode ser encontrada na aba [Anos Anteriores - Site Oficial da OBI](https://olimpiada.ic.unicamp.br/passadas/) (Todas as soluções deste repositório são do Nível 2). 
 
