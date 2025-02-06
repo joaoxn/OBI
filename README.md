@@ -7,7 +7,7 @@ Neste repositório, você encontra os desafios propostos pela olímpiada na moda
 
 ## Sobre a OBI
 
-A OBI é uma olímpiada de informática organizada pela Unicamp dividida em modalidades Iniciação, com provas teóricas, e Programação, com prova prática e submissão de algoritmos que tratam dados de formas específicas.  
+A OBI é uma olímpiada de informática organizada pela Unicamp dividida em modalidades Iniciação, com provas teóricas, e Programação, com provas práticas e submissões de algoritmos que tratam dados de formas específicas.  
 
 A prova de Programação é focada em manipular dados de forma rápida e pouco custosa através de algoritmos escritos pelo competidor, e os desafios cobram fortemente o conhecimento de *Data Structures and Algorithms* (Estrutura de Dados e Algoritmos), que se assemelham a desafios de *LeetCode*, porém com um contexto que requer interpretação.  
 
