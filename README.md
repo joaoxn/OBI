@@ -7,7 +7,9 @@ Neste repositório, você encontra os desafios propostos pela olímpiada na moda
 
 ## Sobre a OBI
 
-A OBI é uma olímpiada de informática organizada pela Unicamp dividida em modalidades Iniciação, com provas teóricas, e Programação, com provas práticas e submissões de algoritmos que tratam dados de formas específicas.  
+![https://www.darwin.com.br/wp-content/uploads/2023/05/logo_obi.png](https://jornal.unicamp.br/wp-content/uploads/sites/32/2024/04/Age_20240412_OBI_Capa.jpg)
+
+A [OBI](https://olimpiada.ic.unicamp.br/) é uma olímpiada de informática organizada pela Unicamp dividida em modalidades Iniciação, com provas teóricas, e Programação, com provas práticas e submissões de algoritmos que tratam dados de formas específicas.  
 
 A prova de Programação é focada em manipular dados de forma rápida e pouco custosa através de algoritmos escritos pelo competidor. Os desafios cobram fortemente o conhecimento de *Data Structures and Algorithms* (Estrutura de Dados e Algoritmos), que se assemelham a desafios de *LeetCode*, porém com um contexto que requer interpretação.  
 
@@ -34,4 +36,13 @@ A proposta de cada questão, para cada modalidade, ano e nível, pode ser encont
 
 [Site oficial da OBI](https://olimpiada.ic.unicamp.br/)
 
-![https://www.darwin.com.br/wp-content/uploads/2023/05/logo_obi.png](https://jornal.unicamp.br/wp-content/uploads/sites/32/2024/04/Age_20240412_OBI_Capa.jpg)
+## Anos Competidos
+
+### 2024
+
+Competi na OBI 2024 - Modalidade Programação, Nível 2.
+
+#### Resultados do site:
+Classificação: **307º** lugar entre 18149 competidores na sua modalidade e nível
+
+[Certificado](https://github.com/joaoxn/OBI/blob/main/OBI%202024/certificado.pdf)
