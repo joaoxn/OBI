@@ -7,11 +7,11 @@ Neste repositório, você encontra os desafios propostos pela olímpiada na moda
 
 ## Sobre a OBI
 
-![https://www.darwin.com.br/wp-content/uploads/2023/05/logo_obi.png](https://jornal.unicamp.br/wp-content/uploads/sites/32/2024/04/Age_20240412_OBI_Capa.jpg)
+![OBI Logo](https://jornal.unicamp.br/wp-content/uploads/sites/32/2024/04/Age_20240412_OBI_Capa.jpg)
 
-A [OBI](https://olimpiada.ic.unicamp.br/) é uma olímpiada de informática organizada pela Unicamp dividida em modalidades Iniciação, com provas teóricas, e Programação, com provas práticas e submissões de algoritmos que tratam dados de formas específicas.  
+A [OBI](https://olimpiada.ic.unicamp.br/) é uma olímpiada de informática organizada pela Unicamp dividida em modalidades Iniciação e Programação. A modalidade Programação possui provas práticas e submissões de algoritmos que tratam dados de formas específicas.  
 
-A prova de Programação é focada em manipular dados de forma rápida e pouco custosa através de algoritmos escritos pelo competidor. Os desafios cobram fortemente o conhecimento de *Data Structures and Algorithms* (Estrutura de Dados e Algoritmos), que se assemelham a desafios de *LeetCode*, porém com um contexto que requer interpretação.  
+A prova de Programação é focada em manipular dados de forma rápida e pouco custosa utilizando algoritmos escritos pelo competidor. Os desafios cobram fortemente o conhecimento de *Data Structures and Algorithms* (Estrutura de Dados e Algoritmos), que se assemelham a desafios de *LeetCode*, porém com um contexto que requer interpretação.  
 
 ### Linguagens Permitidas
 Para cada questão, o competidor pode escolher a linguagem de programação preferida entre um grupo de linguagens permitidas, que são:
@@ -32,7 +32,7 @@ No diretório `/OBI - Treinamento`, estão disponíveis pastas e arquivos de tre
 
 A proposta de cada questão, para cada modalidade, ano e nível, pode ser encontrada na aba [Anos Anteriores - Site Oficial da OBI](https://olimpiada.ic.unicamp.br/passadas/) (Todas as soluções deste repositório são do Nível 2). 
 
-> *Nem todas soluções são completas ou valem nota máxima.*
+> *Nem todas as soluções são completas ou valem nota máxima.*
 
 [Site oficial da OBI](https://olimpiada.ic.unicamp.br/)
 
@@ -45,4 +45,4 @@ Competi na OBI 2024 - Modalidade Programação, Nível 2.
 #### Resultados do site:
 Classificação: **307º** lugar entre 18149 competidores na sua modalidade e nível
 
-[Certificado](https://github.com/joaoxn/OBI/blob/main/OBI%202024/certificado.pdf)
+[Certificado de participação](https://github.com/joaoxn/OBI/blob/main/OBI%202024/certificado.pdf)
