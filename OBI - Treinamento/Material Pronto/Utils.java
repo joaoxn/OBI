@@ -9,13 +9,13 @@ public class Utils {
 
         public static int[] nextIntArray(Scanner scn) {
             return Arrays.stream(
-                    scn.nextLine().split("[,.\\s]")
+                    nextArray(scn)
             ).mapToInt(Integer::parseInt).toArray();
         }
 
         public static double[] nextDoubleArray(Scanner scn) {
             return Arrays.stream(
-                    scn.nextLine().split(" ")
+                    nextArray(scn)
             ).mapToDouble(Double::parseDouble).toArray();
         }
 
