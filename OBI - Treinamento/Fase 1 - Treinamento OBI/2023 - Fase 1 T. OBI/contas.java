@@ -1,3 +1,4 @@
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class contas {
@@ -11,13 +12,8 @@ public class contas {
             contas[i] = scan.nextInt();
         }
 
-        for (int i = 0; i < contas.length-1; i++) {
-            int curr = contas[i];
-            if (curr > contas[i+1]) {
-                contas[i] = contas[i+1];
-                contas[i+1] = curr;
-            }
-        }
+        Arrays.sort(contas);
+
         int max = 0;
         for (int conta : contas) {
             if (v - conta < 0) {

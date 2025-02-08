@@ -5,6 +5,8 @@ public class toupeira {
         Scanner scan = new Scanner(System.in);
 
         Map<Integer, List<Integer>> rotas = new HashMap<>();
+
+        int s = scan.nextInt();
         int t = scan.nextInt();
 
         for (int i = 0; i < t; i++) {
@@ -35,8 +37,8 @@ public class toupeira {
                 int next = passeio[i][j+1];
 
                 List<Integer> paths = rotas.get(curr);
-                if (paths == null) break PASSEIOS;
-                if (!paths.contains(next)) break PASSEIOS;
+                if (paths == null) continue PASSEIOS;
+                if (!paths.contains(next)) continue PASSEIOS;
             }
             possiveis++;
         }

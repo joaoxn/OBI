@@ -13,7 +13,7 @@ public class zero {
             if (in == 0) {
                 if (numbers.isEmpty())
                     continue;
-                numbers.remove(numbers.size()-1);
+                numbers.removeLast();
             } else {
                 numbers.add(in);
             }

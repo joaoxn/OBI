@@ -1,5 +1,4 @@
 import java.util.Arrays;
-import java.util.List;
 import java.util.Scanner;
 
 public class cifra {
@@ -20,9 +19,9 @@ public class cifra {
             int consonantPos = Arrays.binarySearch(consonants, character);
 
             // Se for positivo pertence ao array consonants e é uma consoante
-            if (consonantPos >= 0) {
+            if (consonantPos >= 0 && consonantPos < consonants.length) {
                 System.out.print(closestVogals[consonantPos]);
-                System.out.print(consonants[consonantPos+1]);
+                System.out.print(consonants[(consonantPos+1) == consonants.length ? consonantPos : consonantPos+1]);
             }
         }
         System.out.println();
