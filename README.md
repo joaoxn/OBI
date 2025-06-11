@@ -21,7 +21,7 @@ Para cada questão, o competidor pode escolher a linguagem de programação pref
 - **Java**
 - Javascript
 
-Todos os desafios deste repositório foram resolvidas utilizando Java.
+A maioria dos desafios deste repositório foram resolvidas utilizando Java.
 
 ## Sobre os Arquivos
 
