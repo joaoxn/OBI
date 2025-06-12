@@ -43,6 +43,6 @@ A proposta de cada questão, para cada modalidade, ano e nível, pode ser encont
 Competi na OBI 2024 - Modalidade Programação, Nível 2.
 
 #### Resultados do site:
-Classificação: **307º** lugar entre 18149 competidores na sua modalidade e nível
+Classificação: *"**307º** lugar entre 18149 competidores na sua modalidade e nível"*
 
 [Certificado de participação](https://github.com/joaoxn/OBI/blob/main/OBI%202024/certificado.pdf)
