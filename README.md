@@ -46,3 +46,17 @@ Competi na OBI 2024 - Modalidade Programação, Nível 2.
 Classificação: *"**307º** lugar entre 18149 competidores na sua modalidade e nível"*
 
 [Certificado de participação](https://github.com/joaoxn/OBI/blob/main/OBI%202024/certificado.pdf)
+
+### 2025
+
+Competi na OBI 2025 - Modalidade Programação, Nível 2.
+
+#### Resultados do site:
+
+Fase 1: 400 pontos (12/06);
+- Resultado Esperado: Classificado para Fase 2.
+
+Fase 2: Prova dia 15/08;  
+Fase 3: Prova dia 27/09.  
+
+Classificação: *Aguardando resultados da Fase 1.*
