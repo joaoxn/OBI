@@ -25,5 +25,6 @@ public class maior {
             }
         }
         System.out.println(num);
+        scan.close();
     }
 }

@@ -47,7 +47,7 @@ public class chuva {
                 if (shifted) break;
                 if (shiftToRight) {
                     shifted = true;
-                    r
+
                 }
             } else if (sum > s) {
 

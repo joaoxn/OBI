@@ -35,6 +35,7 @@ public class bombom {
         } else {
             System.out.println("empate");
         }
+        scan.close();
     }
 
     public static int value(char fig, boolean dominante) {
