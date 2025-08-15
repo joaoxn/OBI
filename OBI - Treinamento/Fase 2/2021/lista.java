@@ -31,5 +31,6 @@ public class lista {
             }
         }
         System.out.println(additions);
+        scn.close();
     }
 }

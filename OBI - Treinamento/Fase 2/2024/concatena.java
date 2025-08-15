@@ -59,11 +59,3 @@ public class concatena {
         return val;
     }
 }
-
-/*
- * 1 2 3
- * 12
- * 31
- * 32
- * 
- */

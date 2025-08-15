@@ -8,6 +8,7 @@ public class poligrama {
         String text = scn.next();
 
         System.out.println(isPoligram(text));
+        scn.close();
     }
 
     public static String isPoligram(String text) {

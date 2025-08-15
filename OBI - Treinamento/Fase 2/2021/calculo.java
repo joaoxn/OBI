@@ -19,5 +19,6 @@ public class calculo {
                 qtd++;
         }
         System.out.println(qtd);
+        scn.close();
     }
 }
