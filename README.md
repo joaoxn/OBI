@@ -59,4 +59,4 @@ Fase 1: 400 pontos (12/06);
 Fase 2: Prova dia 15/08;  
 Fase 3: Prova dia 27/09.  
 
-Classificação: *Aguardando resultados da Fase 1.*
+Classificação: *Aguardando Fase 2 (15/08).*
