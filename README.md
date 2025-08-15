@@ -53,10 +53,10 @@ Competi na OBI 2025 - Modalidade Programação, Nível 2.
 
 #### Resultados do site:
 
-Fase 1: 400 pontos (12/06);
-- Resultado Esperado: Classificado para Fase 2.
+Fase 1: 400/400 pontos (12/06);
+- Resultado: Classificado para Fase 2.
 
-Fase 2: Prova dia 15/08;  
+Fase 2: Prova dia 15/08;
 Fase 3: Prova dia 27/09.  
 
 Classificação: *Aguardando Fase 2 (15/08).*
