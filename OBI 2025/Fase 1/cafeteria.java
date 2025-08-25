@@ -1,3 +1,7 @@
+/*
+ * 100/100 Pontos - Todas as Subtarefas resolvidas
+ */
+
 import java.util.Scanner;
 
 public class cafeteria {

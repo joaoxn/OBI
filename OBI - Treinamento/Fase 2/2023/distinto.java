@@ -1,5 +1,4 @@
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 import java.util.Scanner;
 
@@ -22,6 +21,7 @@ public class distinto {
             else sequencias.add(seqAtual);
         }
         System.out.println(biggestListSize(sequencias));
+        scan.close();
     }
 
     private static int containsAtPos(List<Integer> list, int key) {
