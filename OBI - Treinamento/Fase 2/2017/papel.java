@@ -1,7 +1,7 @@
 /*
  * Exercício: https://neps.academy/br/exercise/27
  * Iniciado: 24/08/25 20:13
- * Resolvido em: /08/25
+ * Resolvido em: NÃO RESOLVIDO
  */
 
 import java.util.Scanner;
@@ -16,7 +16,7 @@ public class papel {
         for (int i = 0; i < n; i++) {
             a[i] = scan.nextInt();
         }
-
+        @SuppressWarnings("unused")
         int count = 1;
         
     }
