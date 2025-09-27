@@ -1,15 +1,33 @@
+/*
+ * Exercício: https://neps.academy/br/exercise/2931
+ * Iniciado: xx/xx/25 xx:xx
+ * Resolvido em: NÃO RESOLVIDO (33/100)
+ */
+
 import java.util.*;
 
 // 2s ~ 10^9
 public class burocracia {
     static Scanner scan = new Scanner(System.in);
+    static int MAX_N = (int) 1e5;
+    @SuppressWarnings("all")
+    static List<Integer>[] tree;
+    static int[] p;
 
     public static void main(String[] args) {
         int n = scan.nextInt();
 
-        Tree tree = new Tree(1);
+        tree = new ArrayList[n];
+        p = new int[n+1];
+
         for (int i = 2; i <= n; i++) {
-            tree.append(i, scan.nextInt());
+            p[i] = scan.nextInt();
+            if (tree[p[i]] == null) tree[p[i]] = new ArrayList<>();
+            tree[p[i]].add(i);
+        }
+
+        for (List<Integer> children : tree) {
+            children.sort(Integer::compare);
         }
 
         int q = scan.nextInt();
@@ -25,17 +43,53 @@ public class burocracia {
 
         for (int i = 0; i < q; i++) {
             if (k[i] == 0) {
-                tree.resetChildren(v[i]);
+                resetDFS(v[i], v[i]);
                 continue;
             }
-            Tree.Node node = tree.get(v[i]);
-            Tree.Node supervisor = node.parent;
-            for (int j = 2; j <= k[i]; j++)
-                supervisor = supervisor.parent;
+            int nobre = v[i];
+            for (int j = 1; j <= k[i]; j++) {
+                List<Integer> paths = tree[nobre];
+                nobre = paths.get(0);
+            }
 
-            System.out.println(supervisor.id);
+            System.out.println(nobre);
         }
     }
+
+    public static void resetDFS(int nobre, int curr) {
+        List<Integer> children = tree[curr];
+        for (int i = 1; i < children.size(); i++) {
+            int child = children.get(i);
+            if (child < curr) System.out.println("Warn!");
+            resetDFS(nobre, child);
+            if (children.get(i) == child)
+                i++;
+        }
+        if (children.size() < 1 
+        || children.size() == 1 && children.get(0) != nobre) {
+            int parent = children.get(0);
+            int grandpa = tree[parent].get(0);
+            grandpa
+        }
+    }
+
+    // public static void _resetDFS(int nobre, int curr) {
+    //     if (curr.children.isEmpty() && curr == node)
+    //         return;
+    //     for (int i = 0; i < curr.children.size();) {
+    //         Node child = curr.children.get(i);
+    //         resetDFS(node, child);
+    //         if (curr.children.size() > 0 
+    //         && child == curr.children.get(i)) 
+    //             i++;
+    //     }
+    //     if (curr.children.isEmpty()
+    //         && curr.parent != node) {
+    //             curr.parent.parent.children.add(curr);
+    //             curr.parent.children.remove(curr);
+    //             curr.parent = curr.parent.parent;
+    //     }
+    // }
 
     static class Tree {
         Tree.Node head;
@@ -98,13 +152,20 @@ public class burocracia {
 
         // bug: netos de node mantém seus filhos. Filhos dos netos não viram irmãos
         void resetDFS(Tree.Node node, Tree.Node curr) {
-            for (int i = curr.children.size()-1; i >= 0; i--) {
-                resetDFS(node, curr.children.get(i));
+            if (curr.children.isEmpty() && curr == node)
+                return;
+            for (int i = 0; i < curr.children.size();) {
+                Node child = curr.children.get(i);
+                resetDFS(node, child);
+                if (curr.children.size() > 0 
+                && child == curr.children.get(i)) 
+                    i++;
             }
             if (curr.children.isEmpty()
-                    && curr.parent != node) {
-                curr.parent = curr.parent.parent;
-                curr.parent.children.add(curr);
+                && curr.parent != node) {
+                    curr.parent.parent.children.add(curr);
+                    curr.parent.children.remove(curr);
+                    curr.parent = curr.parent.parent;
             }
         }
 

@@ -45,13 +45,18 @@ public class retasBit {
 
         HashMap<Long, Long> map = new HashMap<>();
 
+        // Mapeia cada valor da lista (cc) para um índice menor
+        // Quando há um número novo, o valor compVal aumenta em 1
+
+        // Assim, tendo uma lista, exemplo: 10, 20, 20, 30, 40
+        // 10 = 1, 20 = 2, 20 igual valor anterior (pula), 30 = 3, 40 = 4
         long compVal = 1;
         map.put(cc[0], compVal);
         for (int i = 1; i < cc.length; i++) {
             if (cc[i] == cc[i-1]) continue;
             map.put(cc[i], ++compVal);
         }
-
+        // Itera sobre cc e atualiza os valores para comprimir, utilizando o map
         for (int i = 0; i < funcs.length; i++) {
             cc[i] = map.get(funcs[i].y2);
         }
