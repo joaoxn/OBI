@@ -43,7 +43,8 @@ A proposta de cada questão, para cada modalidade, ano e nível, pode ser encont
 Competi na OBI 2024 - Modalidade Programação, Nível 2.
 
 #### Resultados do site:
-Classificação: *"**307º** lugar entre 18149 competidores na sua modalidade e nível"*
+Fase Final: Nacional.
+Classificação: *"**307º** lugar entre 5.609 competidores na sua modalidade e nível"*
 
 [Certificado de participação](https://github.com/joaoxn/OBI/blob/main/OBI%202024/certificado.pdf)
 
@@ -53,12 +54,23 @@ Competi na OBI 2025 - Modalidade Programação, Nível 2.
 
 #### Resultados do site:
 
-Fase 1: 400/400 pontos (12/06);
-- Resultado: Classificado para Fase 2.
+Fase Final: Nacional.
+Classificação: *"**65º** lugar entre 6.762 competidores na sua modalidade e nível"*
 
-Fase 2: 367/400 pontos (15/08);  
-- Resultado: Classificado para Fase 3.
 
-Fase 3: Prova dia 27/09.  
 
-Classificação: *Aguardando Resultados (15/10).*
+### 2026
+
+Preparando para Competir na OBI 2026 - Modalidade Programação, Nível Sênior (Universitário).
+
+#### Resultados do site:
+
+Fase 1: Prova dia 10/06.
+
+Fase 2: Prova dia 20/08.
+<!-- Fase 2: 367/400 pontos (20/08);  
+- Resultado: Classificado para Fase 3. -->
+
+Fase 3: Prova dia 03/10.  
+
+Classificação: *Aguardando Resultados (22/10).*
