@@ -33,11 +33,28 @@ int main() {
         printf("Compiler Error\n");
         return -1;
     }
-
-    printf("Escreva o caminho para a pasta de testes: ");
-    string temp;
-    getline(cin, temp);
-    fs::path pastaTestes = temp;
+    
+    fs::path pastaTestes = programa;
+    string nomePrograma = pastaTestes.stem().string();
+    bool found = false;
+    for (const auto& entrada : fs::directory_iterator(pastaTestes.parent_path())) {
+        if (!entrada.is_directory()) continue;
+        string nomePasta = entrada.path().filename().string();
+        
+        if (nomePrograma.size() > 0 && nomePasta.size() >= nomePrograma.size() 
+        && nomePrograma == nomePasta.substr(nomePasta.size()-nomePrograma.size(), nomePrograma.size())) {
+            pastaTestes = entrada.path();
+            found = true;
+            break;
+        }
+    }
+    
+    if (!found) {
+        printf("Escreva o caminho para a pasta de testes: ");
+        string temp;
+        getline(cin, temp);
+        pastaTestes = temp;
+    }
     
     int totalSolved = 0;
     int totalTests = 0;
