@@ -18,21 +18,21 @@ Para cada questão, o competidor pode escolher a linguagem de programação pref
 - C
 - C++
 - Python3
-- **Java**
-- Javascript
+- Java
 
-A maioria dos desafios deste repositório foram resolvidas utilizando Java.
+Os desafios deste repositório foram resolvidos com uma mistura de linguagens, principalmente entre Java e C++.
 
 ## Sobre os Arquivos
 
-- Todas as soluções estão no mesmo estado da submissão em tempo de prova (Exceto na pasta `/OBI - Treinamento`).  
+- Todas as soluções estão no mesmo estado da submissão em tempo de prova, e podem ser encontradas nas pastas `OBI {ano}`, onde `{ano}` é o ano em que houve a competição.  
 - Caminhos de competições que participei possuem os documentos PDF disponibilizados aos competidores no dia das provas e a solução disponibilizada momentos após o encerramento do tempo de prova.
 
-No diretório `/OBI - Treinamento`, estão disponíveis pastas e arquivos de treinamento, na qual resolvo desafios de anos anteriores, sem estar participando da competição no momento da resolução.  
+No diretório `/OBI - Treinamento`, estão disponíveis pastas e arquivos de treinamento, na qual resolvo desafios de anos anteriores da olimpíada, sem estar participando da competição no momento da resolução.  
+Paralelo a isso, a pasta `Problemas` possuem maior diversidade de problemas focados em assuntos de programação competitiva.
 
 A proposta de cada questão, para cada modalidade, ano e nível, pode ser encontrada na aba [Anos Anteriores - Site Oficial da OBI](https://olimpiada.ic.unicamp.br/passadas/) (Todas as soluções deste repositório são do Nível 2). 
 
-> *Nem todas as soluções são completas ou valem nota máxima.*
+> *Nem todas as soluções são completas ou são avaliadas com nota máxima.*
 
 [Site oficial da OBI](https://olimpiada.ic.unicamp.br/)
 
