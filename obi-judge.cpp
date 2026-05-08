@@ -42,7 +42,7 @@ int main() {
         string nomePasta = entrada.path().filename().string();
         
         if (nomePrograma.size() > 0 && nomePasta.size() >= nomePrograma.size() 
-        && nomePrograma == nomePasta.substr(nomePasta.size()-nomePrograma.size(), nomePrograma.size())) {
+        && nomePrograma == nomePasta.substr(nomePasta.size()-nomePrograma.size())) {
             pastaTestes = entrada.path();
             found = true;
             break;
