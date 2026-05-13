@@ -1,3 +1,6 @@
+// Algoritmo não resolve todos os casos.
+// TODO: pensar em novo algoritmo
+
 #include <bits/stdc++.h>
 using namespace std;
 

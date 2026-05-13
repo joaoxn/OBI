@@ -20,11 +20,12 @@ int op(int a, int o, int b) {
 
 string solve(int _a, int b, int c, int d, int e) {
     int a[] = {_a,b,c,d,e};
+    sort(a, a+5);
     do {
         for (int o1 = 0; o1 < 3; o1++) {
             for (int o2 = 0; o2 < 3; o2++) {
                 for (int o3 = 0; o3 < 3; o3++) {
-                    for (int o4 = 0; o4 < 2; o4++) {
+                    for (int o4 = 0; o4 < 3; o4++) {
                         int res = op(op(op(op(a[0],o1,a[1]),o2,a[2]),o3,a[3]),o4,a[4]);
                         if (res == n) return "Possible";
                     }
