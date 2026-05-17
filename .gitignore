@@ -4,3 +4,4 @@
 *.exe
 test.*
 /in.txt
+.autocp
