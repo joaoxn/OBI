@@ -4,7 +4,7 @@
 namespace fs = std::filesystem;
 using namespace std;
 
-
+string judgeDirectory;
 string compiledProgram = "obijudge_compiledprogram.exe";
 const string PROGRAM_OUTPUT = "obijudge_programout.txt";
 int TIME_LIMIT = 1000;
@@ -14,6 +14,23 @@ fs::path pastaTestes;
 
 set<string> availableLangs = {".cpp", ".java"};
 string programaLang;
+
+int setExecutionToJudgeDirectory() {
+    fs::path dir = fs::current_path();
+    string judgePaths[] = {"CP","OBI","OBI Judge"};
+    for (const auto& part : judgePaths) {
+        fs::path newdir = dir / part;
+        if (fs::exists(newdir)) {
+            dir = newdir;
+        }
+    }
+    if (dir.filename().string() != "OBI Judge") {
+        cerr << "Current terminal directory is invalid. Must be at Judge directory or a known parent\n";
+        return -1;
+    }
+    fs::current_path(dir);
+    return 0;
+}
 
 int scanPrograma() {
     printf("Digite o tempo limite (ms), ou 0 para nao verificar TLE.\nPara usar o padrao (1000ms), escreva o caminho para o programa: ");
@@ -44,6 +61,21 @@ int scanPrograma() {
     return 0;
 }
 
+int compilar() {
+    int compilacao = -1;
+    if (programaLang == ".cpp") {
+        compilacao = system(("g++ \""+programa.string()+"\" -o "+compiledProgram).c_str());
+    } else if (programaLang == ".java") {
+        compilacao = system(("javac \""+ programa.string() +"\" -d .").c_str());
+        compiledProgram = programa.stem().string();
+    }
+    if (compilacao != 0) {
+        printf("Compiler Error: Returned Exit Code %d.\n", compilacao);
+        return -1;
+    }
+    return 0;
+}
+
 void procurarTestes() {
     pastaTestes = programa;
     string nomePrograma = pastaTestes.stem().string();
@@ -52,7 +84,7 @@ void procurarTestes() {
         if (!entrada.is_directory()) continue;
         string nomePasta = entrada.path().filename().string();
         
-        if (nomePrograma.size() > 0 && nomePasta.size() >= nomePrograma.size() 
+        if (!nomePrograma.empty() && nomePasta.size() >= nomePrograma.size()
         && nomePrograma == nomePasta.substr(nomePasta.size()-nomePrograma.size())) {
             pastaTestes = entrada.path();
             found = true;
@@ -71,20 +103,26 @@ void test() {
     int totalSolved = 0;
     int totalTests = 0;
     for (const auto& subtarefa : fs::directory_iterator(pastaTestes)) {
+        if (!subtarefa.is_directory()) continue;
         string subtarefaNome = subtarefa.path().stem().string();
         int solvedAmt = 0;
         int testsAmt = 0;
-        
+
         for (const auto& testeEntry : fs::directory_iterator(subtarefa)) {
             fs::path input = testeEntry.path();
-            if (input.extension() != ".in") continue;
+            bool isLegacyInput = input.stem().string().substr(0,2) == "in";
+            if (input.extension() != ".in" && !isLegacyInput) continue;
+
             string testeNome = input.stem().string();
-            
+            if (isLegacyInput) testeNome = testeNome.substr(2);
+
             ++testsAmt;
 
             fs::path solOutput = input;
-            solOutput.replace_extension(".sol");
-            
+            if (!isLegacyInput)
+                solOutput.replace_extension(".sol");
+            else solOutput.replace_filename("out"+solOutput.filename().string().substr(2));
+
             string comandoExec = compiledProgram+" < \""+ input.string() +"\" > "+PROGRAM_OUTPUT;
             if (programaLang == ".java")
                 comandoExec = "java "+ comandoExec;
@@ -116,23 +154,9 @@ void test() {
     printf("Total: %d/%d Aceitos (%.2f%)", totalSolved, totalTests, (100.0*totalSolved/totalTests));
 }
 
-int compilar() {
-    int compilacao = -1;
-    if (programaLang == "cpp") {
-        compilacao = system(("g++ \""+programa.string()+"\" -o "+compiledProgram).c_str());
-    } else if (programaLang == ".java") {
-        compilacao = system(("javac \""+ programa.string() +"\" -d .").c_str());
-        compiledProgram = programa.stem().string();
-    }
-    if (compilacao != 0) {
-        printf("Compiler Error\n");
-        return -1;
-    }
-    return 0;
-}
-
 void clearFolder() {
-    fs::path dir = "./";
+
+    fs::path dir = fs::current_path();
     set<string> permaFiles = {"obi-judge.cpp", "obi-judge.exe"};
 
     for (const auto& file : fs::directory_iterator(dir)) {
@@ -143,8 +167,8 @@ void clearFolder() {
 }
 
 int main() {
+    if (setExecutionToJudgeDirectory() == -1) return -1;
     if (scanPrograma() == -1) return 0;
-    
     if (compilar() == -1) return 0;
     
     procurarTestes();

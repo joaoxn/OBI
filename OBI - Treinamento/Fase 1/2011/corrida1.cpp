@@ -1,4 +1,4 @@
-// 100/100 - https://judge.beecrowd.com/pt/problems/view/2396
+// 100/100 - https://judge.beecrowd.com/pt/problems/view/2394
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -18,7 +18,7 @@ int main() {
     }
     
     sort(scores, scores+n);
-    printf("%d\n%d\n%d\n", scores[0].second, scores[1].second, scores[2].second);
+    printf("%d\n", scores[0].second);
 
     return 0;
 }
