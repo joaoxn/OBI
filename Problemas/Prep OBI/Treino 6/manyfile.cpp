@@ -1,18 +1,20 @@
-// distancia do vértice mais distante da origem de um subgrafo conexo
-//? Wrong Answer (45%)
+// 100/100 - https://judge.beecrowd.com/pt/problems/view/2545
+// Ordenação Topológica - Algoritmo de Kahn
 #include <bits/stdc++.h>
 using namespace std;
 
 int n;
 vector<set<int>> grafo;
 vector<int> cores;
+int grau[1001];
+int dist[1001];
 
 bool temCiclos(int v) {
     cores[v] = 1;
     for (int u : grafo[v]) {
         if (cores[u] == 1) return true;
         if (cores[u] == 2) continue;
-
+        
         if (temCiclos(u)) return true;
     }
     cores[v] = 2;
@@ -25,9 +27,9 @@ int main() {
         grafo.resize(n+1);
         cores.clear();
         cores.resize(n+1);
+        memset(grau, 0, sizeof grau);
+        memset(dist, 0, sizeof dist);
 
-        bool source[n+1];
-        memset(source, true, sizeof source);
         for (int i = 1; i <= n; ++i) {
             int m;
             scanf("%d", &m);
@@ -35,7 +37,7 @@ int main() {
                 int x;
                 scanf("%d", &x);
                 grafo[i].insert(x);
-                source[x] = false;
+                grau[x]++;
             }
         }
         
@@ -56,25 +58,26 @@ int main() {
 
         // BFS Multi-source
         queue<int> q;
-        int dist[n+1];
 
         for (int i = 1; i <= n; ++i) {
-            if (source[i]) {
+            if (grau[i] == 0) {
                 q.push(i);
                 dist[i] = 1;
-            } else {
-                dist[i] = 0;
             }
         }
-
+        
         while (!q.empty()) {
             int v = q.front();
             q.pop();
             for (int u : grafo[v]) {
-                if (dist[u] == 0) q.push(u);
-                dist[u] = max(dist[u], dist[v]+1);
-                if (dist[u] > maxv) maxv = dist[u];
+                if (--grau[u] == 0) {
+                    q.push(u);
+                    dist[u] = dist[v]+1;
+                }
             }
+        }
+        for (int i = 1; i <= n; i++) {
+            if (dist[i] > maxv) maxv = dist[i];
         }
 
         printf("%d\n", maxv);
