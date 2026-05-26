@@ -1,8 +1,10 @@
+// 100/100 - https://judge.beecrowd.com/pt/problems/view/2398
 #include <bits/stdc++.h>
 using namespace std;
 
 int n;
 int a[100001];
+bool flag[100001];
 
 int main() {
     scanf("%d", &n);
@@ -15,9 +17,9 @@ int main() {
     }
     int p = 1;
     for (int i = 0; i < n-2; i++) {
-        if (a[i] != a[i+1]) {
+        if (a[i] != a[i+1] && !flag[i]) {
+            flag[i+1] = true;
             p++;
-            printf("a[%d]!=a[%d]: %d!=%d\n", i,i+1,a[i],a[i+1]);
         }
     }
     

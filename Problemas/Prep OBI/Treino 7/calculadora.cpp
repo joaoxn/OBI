@@ -1,32 +1,34 @@
-// Subtarefas: 2/10
+// 100/100 - https://judge.beecrowd.com/pt/problems/view/2401
 #include <bits/stdc++.h>
 using namespace std;
 
 int n;
-int ops[10];
 
 int main() {
     scanf("%d", &n);
+    long double calc = 1;
     for (int i = 0; i < n; i++) {
         int x;
         char op;
         scanf(" %d %c", &x, &op);
-        ops[x] += (op=='*'?1:-1);
+        if (op == '*')
+            calc *= x;
+        else calc /= x;
     }
-    double calc = 1;
-    for (int i = 2; i <= 9; i++) {
-        while (ops[i] != 0) {
-            if (ops[i] > 0) {
-                calc *= i;
-                ops[i]--;
-            }
-            else {
-                calc /= i;
-                ops[i]++;
-            }
-        }
-    }
-    printf("%.0f\n", round(calc));
+    printf("%.0Lf\n", roundl(calc));
 
     return 0;
 }
+
+/*
+Problema não exige otimização, 
+porém variável de cálculo PRECISA ser long double
+
+Otimizações possíveis:
+Pensar em uma gigante fração: (a^x1*b^x2*...)/(e^x5*f^x6*...)
+- Fatorar números para poder cortá-los
+- Cortar números iguais no numerador e denominador
+    Contar repetições de um número
+- Realizar multiplicação e divisão ambos frequentemente, 
+    para evitar atingir o limite numérico
+*/
