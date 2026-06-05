@@ -57,7 +57,7 @@ Competi na OBI 2025 - Modalidade Programação, Nível 2.
 Fase Final: Nacional.
 Classificação: *"**65º** lugar entre 6.762 competidores na sua modalidade e nível"*
 
-
+[Certificado de participação](https://github.com/joaoxn/OBI/blob/main/OBI%202025/certificado.pdf)
 
 ### 2026
 
