@@ -12,8 +12,10 @@ int a2[100100]; // 1o valor alterado
 
 int32_t main() {
     scanf("%lld", &n);
+    long long best = 0;
     for (int i = 0; i < n; i++) {
         scanf("%lld", a+i);
+        if (a[i] > best) best = a[i];
         a1[i] = i%2==0 ? a[i] : -a[i];
         a2[i] = -a1[i];
     }
@@ -26,10 +28,9 @@ int32_t main() {
         else
             g2.push_back(a2[i]+a2[i+1]);
     }
-    if ((n-1)%2==0) g1.push_back(a2[n-1]);
-    else g2.push_back(a1[n-1]);
+    if ((n-1)%2==0) g1.push_back(a1[n-1]);
+    else g2.push_back(a2[n-1]);
 
-    long long best = 0;
     long long sum = 0;
     for (int i = 0; i < g1.size(); i++) {
         // printf("%d ", g1[i]);
@@ -40,9 +41,8 @@ int32_t main() {
         }
         sum += g1[i];
     }
-    long long best1 = max(best,sum);
+    best = max(best,sum);
     // printf("\n");
-    best = 0;
     sum = 0;
     for (int i = 0; i < g2.size(); i++) {
         // printf("%d ", g2[i]);
@@ -53,7 +53,7 @@ int32_t main() {
         }
         sum += g2[i];
     }
+    best = max(best,sum);
     // printf("\n");
-    long long best2 = max(best,sum);
-    printf("%lld\n", max(best1, best2));
+    printf("%lld\n", best);
 }
