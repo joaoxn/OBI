@@ -1,0 +1,1 @@
+{"name":"Local: buzzwords","url":"/home/joao/Documents/OBI/Problemas/Algoritmos/Strings/buzzwords.cpp","tests":[{"id":1781206684050,"input":"THE OTHER MATHEMATICS NOT HERE\nAA","output":"5\n4\n4\n2\n2\n\n2"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"/home/joao/Documents/OBI/Problemas/Algoritmos/Strings/buzzwords.cpp","group":"local","local":true}
