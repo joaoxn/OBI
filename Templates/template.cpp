@@ -5,16 +5,28 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-#define debug(x) cout << #x << ": " << (x) << "\n"
-#define debugf(args...) cout <<  format(args)
+#define debugcpp(x) cout << #x << ": " << (x) << "\n"
+#define debug(args...) printf(args)
+#define debugln(args...) debug(args);debug("\n")
 #define fi first
 #define se second
 #define ll long long
 #define INF INT_MAX
 #define LINF LONG_LONG_MAX
 #define MOD 1000000007
-
 // #define int long long
+
+ll modpow(ll base, ll exp, ll mod) {
+    ll res = 1;
+    base %= mod;
+    while (exp > 0) {
+        if (exp & 1) res = (res*base) % mod;
+        base = (base*base) % mod;
+        exp >>= 1;
+    }
+    return res;
+}
+
 
 int n;
 
@@ -31,7 +43,7 @@ int main() {
         cin >> v[i];
     }
 
-    cout << format("{}", n);
+
 
     return 0;
 }
