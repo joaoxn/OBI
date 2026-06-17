@@ -65,7 +65,8 @@ Preparando para Competir na OBI 2026 - Modalidade Programação, Nível Sênior 
 
 #### Resultados do site:
 
-Fase 1: Prova dia 10/06.
+Fase 1: 400/400 pontos (12/06);
+- Resultado: Classificado para Fase 2.
 
 Fase 2: Prova dia 20/08.
 <!-- Fase 2: 367/400 pontos (20/08);  
