@@ -36,41 +36,69 @@ A proposta de cada questão, para cada modalidade, ano e nível, pode ser encont
 
 [Site oficial da OBI](https://olimpiada.ic.unicamp.br/)
 
-## Anos Competidos
+# Anos Competidos
 
-### 2024
+## 2024
 
 Competi na OBI 2024 - Modalidade Programação, Nível 2.
 
-#### Resultados do site:
+### Resultados do site
 Fase Final: Nacional.
 Classificação: *"**307º** lugar entre 5.609 competidores na sua modalidade e nível"*
 
 [Certificado de participação](https://github.com/joaoxn/OBI/blob/main/OBI%202024/certificado.pdf)
 
-### 2025
+#### Pontuação
+
+Fase 1: 300/400 pontos;
+- Resultado: Classificado para Fase 2.
+
+Fase 2 Turno A: 260/400 pontos;
+- Resultado: Classificado para Fase 3.
+
+Fase 2 Turno B: 400/400 pontos;  
+- Resultado: Classificado para Fase 3.
+<!-- Fase 2: 367/400 pontos (20/08);  
+- Resultado: Classificado para Fase 3. -->
+
+Fase 3: 80/500 pontos.  
+- Resultado: 307º colocado.
+
+## 2025
 
 Competi na OBI 2025 - Modalidade Programação, Nível 2.
 
-#### Resultados do site:
+### Resultados do site
 
 Fase Final: Nacional.
 Classificação: *"**65º** lugar entre 6.762 competidores na sua modalidade e nível"*
 
 [Certificado de participação](https://github.com/joaoxn/OBI/blob/main/OBI%202025/certificado.pdf)
 
-### 2026
+#### Pontuação
 
-Preparando para Competir na OBI 2026 - Modalidade Programação, Nível Sênior (Universitário).
+Fase 1: 400/400 pontos;
+- Resultado: Classificado para Fase 2.
 
-#### Resultados do site:
+Fase 2: 367/400 pontos;
+- Resultado: Classificado para Fase 3.
+
+Fase 3: 120/500 pontos;
+- Resultado: 65º colocado.
+
+## 2026
+
+Competindo na OBI 2026 - Modalidade Programação, Nível Sênior (Universitário).
+
+### Resultados do site:
+
+#### Pontuação
 
 Fase 1: 400/400 pontos (12/06);
 - Resultado: Classificado para Fase 2.
 
-Fase 2: Prova dia 20/08.
-<!-- Fase 2: 367/400 pontos (20/08);  
-- Resultado: Classificado para Fase 3. -->
+Fase 2: 328/400 pontos (21/08);
+- Resultado: Aguardando classificação.
 
 Fase 3: Prova dia 03/10.  
 
