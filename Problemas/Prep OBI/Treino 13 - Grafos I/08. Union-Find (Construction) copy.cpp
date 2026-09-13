@@ -12,15 +12,9 @@ int n, m;
 vector<int> pai;
 vector<int> sz;
 
-int find(int a, int ha=-1) {
-    int v = a;
-    while (pai[v] != v) {
-        int next = pai[v];
-        if (ha != -1) pai[v] = ha;
-        v = next;
-    }
-    if (ha == -1) find(a,v);
-    return v;
+int find(int a) {
+    if (pai[a] == a) return a;
+    return pai[a] = find(pai[a]);
 }
 
 void unite(int a, int b) {
