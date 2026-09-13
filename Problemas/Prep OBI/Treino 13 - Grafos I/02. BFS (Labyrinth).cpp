@@ -13,26 +13,6 @@ vector<vector<int>> parent;
 vector<pii> dirs = {{0,1},{1,0},{0,-1},{-1,0}};
 string dirChar = "RDLU";
 
-// vector<char> path;
-// bool dfs(int i, int j) {
-//     vis[i][j] = true;
-//     if (g[i][j] == 'B') return true;
-
-//     for (int k = 0; k < 4; k++) {
-//         int ni = i+dirs[k].fi;
-//         int nj = j+dirs[k].se;
-//         if (
-//             clamp(ni,0,n) != ni || clamp(nj,0,m) != nj 
-//             || g[ni][nj] == '#' || vis[ni][nj]
-//         ) continue;
-
-//         path.push_back(dirChar[k]);
-//         if (dfs(ni,nj)) return true;
-//         path.pop_back();
-//     }
-//     return false;
-// }
-
 void outMatrix() {
     for (int i = 0; i < n; i++) {
         for (int j = 0; j < m; j++) {
