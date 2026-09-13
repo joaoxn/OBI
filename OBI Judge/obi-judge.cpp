@@ -4,8 +4,21 @@
 namespace fs = std::filesystem;
 using namespace std;
 
+#ifdef _WIN32
+    string compiledProgram = "obijudge_compiledprogram.exe";
+    string execPrefix = "";
+    string diffCmd = "fc /W ";
+    string nullStream = " > nul";
+    string judgeExe = "obi-judge.exe";
+#else
+    string compiledProgram = "obijudge_compiledprogram";
+    string execPrefix = "./";
+    string diffCmd = "diff -w ";
+    string nullStream = " > /dev/null";
+    string judgeExe = "obi-judge"; // Sem .exe no Linux
+#endif
+
 string judgeDirectory;
-string compiledProgram = "obijudge_compiledprogram.exe";
 const string PROGRAM_OUTPUT = "obijudge_programout.txt";
 int TIME_LIMIT = 1000;
 
@@ -64,7 +77,7 @@ int scanPrograma() {
 int compilar() {
     int compilacao = -1;
     if (programaLang == ".cpp") {
-        compilacao = system(("g++ \""+programa.string()+"\" -o "+compiledProgram).c_str());
+        compilacao = system(("g++ \""+programa.generic_string()+"\" -o "+compiledProgram+" -std=c++20").c_str());
     } else if (programaLang == ".java") {
         compilacao = system(("javac \""+ programa.string() +"\" -d .").c_str());
         compiledProgram = programa.stem().string();
@@ -123,9 +136,12 @@ void test() {
                 solOutput.replace_extension(".sol");
             else solOutput.replace_filename("out"+solOutput.filename().string().substr(2));
 
-            string comandoExec = compiledProgram+" < \""+ input.string() +"\" > "+PROGRAM_OUTPUT;
-            if (programaLang == ".java")
-                comandoExec = "java "+ comandoExec;
+            string comandoExec;
+if (programaLang == ".java") {
+    comandoExec = "java " + compiledProgram + " < \"" + input.string() + "\" > " + PROGRAM_OUTPUT;
+} else {
+    comandoExec = execPrefix + compiledProgram + " < \"" + input.string() + "\" > " + PROGRAM_OUTPUT;
+}
 
             auto start = chrono::high_resolution_clock::now();
             int execution_status = system(comandoExec.c_str());
@@ -133,7 +149,7 @@ void test() {
             auto duration = chrono::duration_cast<chrono::milliseconds>(end - start);
             int executionMilliseconds = duration.count();
 
-            string comandoDiff = "fc /W "+PROGRAM_OUTPUT+" \""+ solOutput.string() +"\" > nul";
+            string comandoDiff = diffCmd + PROGRAM_OUTPUT + " \"" + solOutput.string() + "\"" + nullStream;
             int resultado = system(comandoDiff.c_str());
 
             string status;
@@ -142,22 +158,22 @@ void test() {
             else if (executionMilliseconds > TIME_LIMIT) status = "Time Limit Exceeded";
             else status = "Accepted";
 
-            printf("Subtarefa %s - Teste %s: %s (%dms)\n", 
+            printf("Subtarefa %s - Teste %s: %s (%ldms)\n", 
                 subtarefaNome.c_str(), testeNome.c_str(), status.c_str(), duration.count());
             
             if (status == "Accepted") ++solvedAmt;
         }
         totalSolved += solvedAmt;
         totalTests += testsAmt;
-        printf("Subtarefa %s: %d/%d Aceitos (%.2f%)\n\n", subtarefaNome.c_str(), solvedAmt, testsAmt, (100.0 * solvedAmt/testsAmt));
+        printf("Subtarefa %s: %d/%d Aceitos (%.2f%%)\n\n", subtarefaNome.c_str(), solvedAmt, testsAmt, (100.0 * solvedAmt/testsAmt));
     }
-    printf("Total: %d/%d Aceitos (%.2f%)", totalSolved, totalTests, (100.0*totalSolved/totalTests));
+    printf("Total: %d/%d Aceitos (%.2f%%)", totalSolved, totalTests, (100.0*totalSolved/totalTests));
 }
 
 void clearFolder() {
 
     fs::path dir = fs::current_path();
-    set<string> permaFiles = {"obi-judge.cpp", "obi-judge.exe"};
+    set<string> permaFiles = {"obi-judge.cpp", judgeExe};
 
     for (const auto& file : fs::directory_iterator(dir)) {
         if (permaFiles.count(file.path().filename().string())) 
