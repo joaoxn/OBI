@@ -6,15 +6,19 @@ typedef long long ll;
 
 #define IGN if (0) 
 #define fi first
-#define se second.first
+#define se second
+#define sf second.first
 #define th second.second
-typedef pair<int,pair<int,int>> trio;
-typedef pair<int,int> pii;
+typedef pair<ll,pair<ll,ll>> trio;
+typedef pair<ll,ll> pii;
 typedef long long ll;
+
+#define INF LLONG_MAX
 
 int n, m;
 vector<set<pii>> g;
-vector<int> dist;
+vector<ll> d;
+vector<bool> vis;
 
 int main() {
     ios_base::sync_with_stdio(false);
@@ -22,28 +26,30 @@ int main() {
 
     cin >> n >> m;
     g.resize(n+1);
-    dist.resize(n+1);
-
-    map<pii,int> mp;
-    vector<pii> edges;
+    d.resize(n+1, INF);
+    vis.resize(n+1);
+    d[1] = 0;
 
     for (int i = 0; i < m; i++) {
         int a, b, c; cin >> a >> b >> c;
-        pii k = {a,b};
-        mp[k] = min(mp[k],c);
-        edges.push_back(k);
+        g[a].insert({b,c});
     }
-    for (pii edge : edges) g[edge.fi].insert({edge.second,mp[edge]});
 
     priority_queue<pii, vector<pii>, greater<pii>> pq;
-    pq.push({1,0});
+    pq.push({d[1], 1});
     while (!pq.empty()) {
-        pii u = pq.top(); pq.pop();
+        auto [dist, u] = pq.top(); pq.pop();
+        if (dist > d[u]) continue;
 
-        for (pii v : g[u.fi]) {
-
+        for (auto [v, c] : g[u]) {
+            if (d[u]+c < d[v]) {
+                d[v] = d[u]+c;
+                pq.push({d[v],v});
+            }
         }
     }
+
+    for (int i = 1; i <= n; i++) cout << d[i] << ' ';
 
     return 0;
 }
