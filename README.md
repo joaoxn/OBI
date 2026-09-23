@@ -98,7 +98,7 @@ Fase 1: 400/400 pontos (12/06);
 - Resultado: Classificado para Fase 2.
 
 Fase 2: 328/400 pontos (21/08);
-- Resultado: Aguardando classificação.
+- Resultado: Classificado para Fase 3.
 
 Fase 3: Prova dia 03/10.  
 
