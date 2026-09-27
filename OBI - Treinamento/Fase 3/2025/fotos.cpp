@@ -1,7 +1,7 @@
 // https://neps.academy/br/exercise/3573
 // 100/100
 // Iniciado: Sun Sep 27 09:52:59 2026
-// Finalizado: Sun Sep 27 10:24:05 2026
+// Finalizado: Sun Sep 27 10:16:05 2026
 
 #include <bits/stdc++.h>
 using namespace std;
