@@ -2,6 +2,7 @@
  * Exercício: https://neps.academy/br/exercise/1055
  * Iniciado: 14/09/25 16:33
  * Resolvido em: 21/09/25 16:28
+ * Prefix 1D
  */
 
 // demorei por causa que a resposta era long 😭
