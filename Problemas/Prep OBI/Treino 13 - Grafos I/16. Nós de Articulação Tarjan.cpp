@@ -27,7 +27,7 @@ void dfs(int u, int p=-1) {
         }
     }
     if (u != 1) return;
-
+    // Verifica se 1 é Articulação
     int lowg = -1;
     for (int v : g[u]) {
         if (lowg != -1 && lowg != low[v]) {

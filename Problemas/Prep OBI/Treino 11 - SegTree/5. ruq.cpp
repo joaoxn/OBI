@@ -30,7 +30,6 @@ void build(ll l, ll r, ll i=1, ll sl=0, ll sr=POWN-1) {
 
 // !WRONG - Seg increase value scales with range covered
 void descendLazy(int i) {
-    debugln("lazy[%d]=%d ", i,lazy[i]);
     lazy[i*2] += lazy[i];
     lazy[i*2+1] += lazy[i];
     seg[i*2] += lazy[i];
@@ -43,7 +42,6 @@ void update(ll l, ll r, ll val, ll i=1, ll sl=0, ll sr=POWN-1) {
     if (l <= sl && sr <= r) {
         seg[i] += val;
         if (sl != sr) {
-            debugln("lazy[%d]+=%d",i,val);
             lazy[i] += val;
         }
         return;
@@ -58,11 +56,10 @@ void update(ll l, ll r, ll val, ll i=1, ll sl=0, ll sr=POWN-1) {
 }
 
 ll query(ll l, ll r, ll i=1, ll sl=0, ll sr=POWN-1) {
-    debugln("query [%d,%d](%d)",sl,sr,i);
     if (sr < l || sl > r) return NEUTR;
     if (l <= sl && sr <= r) return seg[i];
 
-        descendLazy(i);
+    descendLazy(i);
 
     ll mid = (sl+sr)>>1;
     ll a = query(l,r, i*2, sl, mid);
