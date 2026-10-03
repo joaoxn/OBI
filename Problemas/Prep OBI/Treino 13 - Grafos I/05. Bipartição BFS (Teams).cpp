@@ -1,5 +1,3 @@
-// https://cses.fi/problemset/task/1668
-
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -25,18 +23,13 @@ int main() {
     bool possible = true;
     for (int i = 1; i <= n; i++) {
         if (team[i] != 0) continue;
-        int t = 1;
-        team[i] = t;
+        team[i] = 1;
 
         queue<int> q;
         q.push(i);
         while (!q.empty()) {
-            for (int i = 1; i <= n; i++) {
-                cout << team[i] << ' ';
-            }
-            cout << '\n';
             int u = q.front(); q.pop();
-            t = !(t-1)+1;
+            int t = !(team[u]-1)+1;
 
             for (int v : g[u]) {
                 if (team[v] != 0 && team[v] != t) {
@@ -58,13 +51,3 @@ int main() {
 
     return 0;
 }
-
-/*
-
-1 2
-3 4
-3 5
-2 5
-
-
-*/
