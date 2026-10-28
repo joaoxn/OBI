@@ -40,10 +40,12 @@ A proposta de cada questão, para cada modalidade, ano e nível, pode ser encont
 
 ## 2024
 
-Competi na OBI 2024 - Modalidade Programação, Nível 2.
+Competi na OBI 2024 - Modalidade Programação, Nível 2.  
+Instituição: SESI - São José
 
-### Resultados do site
-Fase Final: Nacional.
+### Resultados
+
+Fase Final: Nacional.  
 Classificação: *"**307º** lugar entre 5.609 competidores na sua modalidade e nível"*
 
 [Certificado de participação](https://github.com/joaoxn/OBI/blob/main/OBI%202024/certificado.pdf)
@@ -66,11 +68,12 @@ Fase 3: 80/500 pontos.
 
 ## 2025
 
-Competi na OBI 2025 - Modalidade Programação, Nível 2.
+Competi na OBI 2025 - Modalidade Programação, Nível 2.  
+Instituição: SESI - São José
 
-### Resultados do site
+### Resultados
 
-Fase Final: Nacional.
+Fase Final: Nacional.  
 Classificação: *"**65º** lugar entre 6.762 competidores na sua modalidade e nível"*
 
 [Certificado de participação](https://github.com/joaoxn/OBI/blob/main/OBI%202025/certificado.pdf)
@@ -88,9 +91,15 @@ Fase 3: 120/500 pontos;
 
 ## 2026
 
-Competindo na OBI 2026 - Modalidade Programação, Nível Sênior (Universitário).
+Competi na OBI 2026 - Modalidade Programação, Nível Sênior (Universitário).  
+Instituição: Universidade Federal de Santa Catarina (UFSC)
 
-### Resultados do site:
+### Resultados
+
+Fase Final: Nacional.  
+Classificação: *"**14º** lugar entre 3049 competidores na sua modalidade e nível **(medalha de bronze)**"*
+
+[Certificado de participação](https://github.com/joaoxn/OBI/blob/main/OBI%202026/certificado.pdf)
 
 #### Pontuação
 
@@ -100,6 +109,9 @@ Fase 1: 400/400 pontos (12/06);
 Fase 2: 328/400 pontos (21/08);
 - Resultado: Classificado para Fase 3.
 
-Fase 3: Prova dia 03/10.  
+Fase 3: 232/500 pontos (03/10);
+- Resultado: 14º colocado e **Medalha de Bronze**.
+
+
 
 Classificação: *Aguardando Resultados (22/10).*
